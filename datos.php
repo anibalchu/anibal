@@ -8,6 +8,8 @@
 
 $dni=$_REQUEST ['dni'];
 $clave=$_REQUEST ['contrasenia'];
+echo $dni;
+echo $clave;
 try{
     $conexion= new pdo('mysql:host=localhost;dbname=datos', 'root','');
 }catch(pdoxeptioon$e){
@@ -20,6 +22,7 @@ $resultado= $statement->fetch();
 if($resultado){
     $_SESSION["usuario"] = $dni;
     session_start();
+    echo "si";
     
     // header("location:paginaescolar.php");
 

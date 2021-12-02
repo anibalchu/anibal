@@ -19,12 +19,13 @@ $statement=$conexion-> prepare('SELECT * from usuarios where dni =:dni and clave
 $statement ->execute (array(':dni'=> $dni,':clave'=>$clave));
 $resultado= $statement->fetch();
 
-if($resultado){
-    $_SESSION["usuario"] = $dni;
+if($resultado!=null){
+    
     session_start();
+    $_SESSION["usuario"] = $dni;
     echo "si";
     
-    // header("location:paginaescolar.php");
+    //header("location:paginaescolar.php");
 
 }else {
     echo '<script>
@@ -35,7 +36,7 @@ if($resultado){
     document.getElementById("stop").innerHTML="error"
     </script>';
 }
-
+echo $_SESSION["usuario"];
 
 if(isset($_SESSION["usuario"])){
     header("location:paginaescolar.php");

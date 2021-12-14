@@ -15,7 +15,7 @@ try{
 }catch(pdoxeptioon$e){
     echo 'Error: '.$e->getmessage();
 }
-$statement=$conexion-> prepare('SELECT * from usuarios where dni =:dni and clave =:clave');
+$statement=$conexion-> prepare('SELECT * from usuario where dni =:dni and clave =:clave');
 $statement ->execute (array(':dni'=> $dni,':clave'=>$clave));
 $resultado= $statement->fetch();
 
@@ -25,7 +25,7 @@ if($resultado!=null){
     $_SESSION["usuario"] = $dni;
     echo "si";
     
-    //header("location:paginaescolar.php");
+    header("location:paginaescolar.php");
 
 }else {
     echo '<script>

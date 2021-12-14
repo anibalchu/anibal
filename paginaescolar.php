@@ -13,24 +13,24 @@
         <div class="menu">
         <img src="logo.png" alt="" height="50" width="80">
         <nav> 
-            <h1><b> <i>pagina escolar</i> <b> <foin color="#6A0888"></foin></h1> 
-        <ul>
-        <li><a href="#">sobre mi</a></li>
-        <li><a href="#">servicios</a></li>
-        <li><a href="#">blog</a></li>
-        <li><a href="#">contactos</a></li>
+            <h1><b> <i>PAGINA ESCOLAR</i> <b> <foin color="#6A0888"></foin></h1> 
+            <ul>
+            <li><a href="#">SOBRE MI</a></li>
+            <li><a href="#">SERVICIOS</a></li>
+            <li><a href="#">BLOG</a></li>
+            <li><a href="#">CONTACTOS</a></li>
         <?php
         if(isset($_SESSION["usuario"])){
         ?>
-        
-        <li><a href="">salir</a></li>
-
-
-        
+        </nav>
+            <li><a href="">REGISTRO</a></li>
+            <li><a href="">CALIFICACION</a></li>
+            <li><a href="">INACISTENCIA</a></li>
+            <li><a href="">CERRAR SESSION</a></li>
         <?php
             }else{
         ?>
-            <li><a href="login.html">iniciar secion</a></li>
+            <li><a href="login.html">INICIAR SESSION</a></li>
         <?php
         }
         ?>
@@ -38,7 +38,6 @@
         </nav>
         </div>
     </header>
-   
     
 </body>
 </html> 

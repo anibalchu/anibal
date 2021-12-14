@@ -37,7 +37,6 @@ nav  ul li a{
     text-decoration: none;
     color: blueviolet;
     font-weight: bold;
- 
 } 
 nav ul li a ::before{
     display:block;
@@ -48,9 +47,8 @@ nav ul li a ::before{
     top:0;
     position: absolute;
     transition:width 0.2s;
- 
 }
 nav ul li a:hover{
     width:100%;
- background: rgb(196, 231, 193);
+    background: rgb(196, 231, 193);
 }

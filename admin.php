@@ -15,22 +15,11 @@
         <nav> 
             <h1><b> <i>PAGINA ESCOLAR</i> <b> <foin color="#6A0888"></foin></h1> 
             <ul>
-            <li><a href="#">SOBRE MI</a></li>
-            <li><a href="#">SERVICIOS</a></li>
-            <li><a href="#">BLOG</a></li>
-            <li><a href="#">CONTACTOS</a></li>
-        <?php
-        if(isset($_SESSION["usuario"])){
-        ?>
-        </nav>
-        <?php
-            }else{
-        ?>
-            <li><a href="login.php">INICIAR SESSION</a></li>
-        <?php
-        }
-        ?>
-        </ul>
+            <li><a href="registro.php">REGISTRO</a></li>
+            <li><a href="calificacion.php">CALIFICACION</a></li>
+            <li><a href="inacistencia.php">INACISTENCIA</a></li>
+            <li><a href="paginaescolar.php">CERRAR SESION</a></li>
+            </ul>
         </nav>
         </div>
     </header>

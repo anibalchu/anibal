@@ -39,8 +39,9 @@ if($resultado!=null){
 echo $_SESSION["usuario"];
 
 if(isset($_SESSION["usuario"])){
-    header("location:paginaescolar.php");
+    header("location:admin.php");
     }else{
         echo"no hay secion";
     }
+
 ?>

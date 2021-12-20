@@ -1,9 +1,9 @@
 <?php
 include("calificacion.php");
 
-$nombre= $_post["nombre"];
-$apellido= $_post["apellido"];
-$nota= $_post["nota"];
+$nombre= $_REQUEST["nombre"];
+$apellido= $_REQUEST["apellido"];
+$nota= $_REQUEST["nota"];
 
 $insertar="insert into trimestre(nombre, apellido, nota) values ('$nombre','$apellido','$nota')";
 

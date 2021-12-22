@@ -31,39 +31,39 @@ $personas="select * from personas";
 <body>
     <div class="container-add">
         <h2 class="container__title">registrar</h2>
-        <form action="insertar.php" method="post" class="container__from">
-            <label for="" class="container__label">dni:</label>
-            <input name="dni" type="number" class="container__input">
-            <label for="" class="container__label">apellido:</label>
-            <input name="apellido"type="text" class="container__input">
-            <label for="" class="container__label">nombre:</label>
-            <input name="nombre" type="text" class="container__input">
-            <label for="" class="container__label">direccion:</label>
-            <input name="direccion" type="text" class="container__input">
-            <label for="" class="container__label">telefono:</label>
-            <input name="telefono" type="number" class="container__input">
-            <label for="" class="container__label">correo:</label>
-            <input name="correo" type="text" class="container__input">
-            <input class="container__submit" type="submit" value="cargar">
+        <form action="insertar2.php" method="post" class="container__from">
+            <label for="" class="container__label">DNI</label>
+            <input name="DNI" type="number" class="container__input">
+            <label for="" class="container__label">APELLIDO:</label>
+            <input name="APELLIDO"type="text" class="container__input">
+            <label for="" class="container__label">NOMBRE:</label>
+            <input name="NOMBRE" type="text" class="container__input">
+            <label for="" class="container__label">DIRECCION:</label>
+            <input name="DIRECCION" type="text" class="container__input">
+            <label for="" class="container__label">TELEFONO:</label>
+            <input name="TELEFONO" type="number" class="container__input">
+            <label for="" class="container__label">CORREO:</label>
+            <input name="CORREO" type="text" class="container__input">
+            <input class="container__submit" type="submit" value="CARGAR">
         </form>
     </div>
 
     <div class="container-table">
-        <div class="table__title">personas</div>
-        <div class="table__header">dni</div>
-        <div class="table__header">apellido</div>
-        <div class="table__header">nombre</div>
-        <div class="table__header">direccion</div>
-        <div class="table__header">telefono</div>
-        <div class="table__header">correo</div>
+        <div class="table__title">PERSONAS</div>
+        <div class="table__header">DNI</div>
+        <div class="table__header">APELLIDO</div>
+        <div class="table__header">NOMBRE</div>
+        <div class="table__header">DIRECCION</div>
+        <div class="table__header">TELEFONO</div>
+        <div class="table__header">CORREO</div>
         <?php $resultado = mysqli_query($conexion, $personas);
         while($row=mysqli_fetch_assoc($resultado)) { ?>
-            <div class="table__item"><?php echo $row ["dni"];?></div>
-            <div class="table__item"><?php echo $row ["apellido"];?></div>
-            <div class="table__item"><?php echo $row ["nombre"];?></div>
-            <div class="table__item"><?php echo $row ["direccion"];?></div>
-            <div class="table__item"><?php echo $row ["telefono"];?></div>
-            <div class="table__item"><?php echo $row ["correo"];?></div>
+            <div class="table__item"><?php echo $row ["DNI"];?></div>
+            <div class="table__item"><?php echo $row ["APELLIDO"];?></div>
+            <div class="table__item"><?php echo $row ["NOMBRE"];?></div>
+            <div class="table__item"><?php echo $row ["DIRECCION"];?></div>
+            <div class="table__item"><?php echo $row ["TELEFONO"];?></div>
+            <div class="table__item"><?php echo $row ["CORREO"];?></div>
             <?php } mysqli_free_result($resultado);?>
     </div>
 </body>

@@ -1,6 +1,6 @@
 <?php
 include("cn.php");
-$inasistencia="select * from inacistencia";
+$inacistencia="select * from inacistencia";
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -31,31 +31,31 @@ $inasistencia="select * from inacistencia";
 <body>
     <div class="container-add">
         <h2 class="container__title">cargar faltas</h2>
-        <form action="insertar.php" method="post" class="container__from">
-            <label for="" class="container__label">nombre:</label>
-            <input name="nombre" type="text" class="container__input">
-            <label for="" class="container__label">apellido:</label>
-            <input name="apellido"type="text" class="container__input">
-            <label for="" class="container__label">fecha:</label>
-            <input name="fecha" type="text" class="container__input">
-            <label for="" class="container__label">faltas:</label>
-            <input name="faltas" type="number" class="container__input">
+        <form action="insertar3.php" method="post" class="container__from">
+            <label for="" class="container__label">NOMBRE:</label>
+            <input name="NOMBRE" type="text" class="container__input">
+            <label for="" class="container__label">APELLIDO:</label>
+            <input name="APELLIDO"type="text" class="container__input">
+            <label for="" class="container__label">FECHA:</label>
+            <input name="FECHA" type="date" class="container__input">
+            <label for="" class="container__label">FALTAS:</label>
+            <input name="FALTAS" type="number" class="container__input">
             <input class="container__submit" type="submit" value="cargar">
         </form>
     </div>
 
     <div class="container-table">
         <div class="table__title">faltas de alumnos </div>
-        <div class="table__header">nombre</div>
-        <div class="table__header">apellido</div>
-        <div class="table__header">fecha</div>
-        <div class="table__header">faltas</div>
+        <div class="table__header">NOMBRE</div>
+        <div class="table__header">APELLIDO</div>
+        <div class="table__header">FECHA</div>
+        <div class="table__header">FALTAS</div>
         <?php $resultado = mysqli_query($conexion, $inacistencia);
         while($row=mysqli_fetch_assoc($resultado)) { ?>
-            <div class="table__item"><?php echo $row ["nombre"];?></div>
-            <div class="table__item"><?php echo $row ["apellido"];?></div>
-            <div class="table__item"><?php echo $row ["fecha"];?></div>
-            <div class="table__item"><?php echo $row ["faltas"];?></div>
+            <div class="table__item"><?php echo $row ["NOMBRE"];?></div>
+            <div class="table__item"><?php echo $row ["APELLIDO"];?></div>
+            <div class="table__item"><?php echo $row ["FECHA"];?></div>
+            <div class="table__item"><?php echo $row ["FALTAS"];?></div>
             <?php } mysqli_free_result($resultado);?>
     </div>
 </body>

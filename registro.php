@@ -9,7 +9,7 @@ $personas="select * from personas";
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <link rel="stylesheet" href="CALIFICA.CSS">
+    <link rel="stylesheet" href="registro.css">
     <title>pagina escolar</title>
 </head>
     <body>
